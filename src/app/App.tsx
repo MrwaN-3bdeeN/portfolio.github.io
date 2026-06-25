@@ -1104,7 +1104,7 @@ export default function App() {
           <div className="absolute bottom-0 right-1/4 w-56 h-56 rounded-full opacity-[0.03] pointer-events-none" style={{ background: "radial-gradient(circle, var(--gradient-end), transparent)" }} />
 
           <div className="relative max-w-6xl mx-auto px-6 md:px-12 py-20 md:py-32">
-            <div className="grid md:grid-cols-12 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
               <div className="md:col-span-8">
                 <Reveal>
                   <p className="text-[11px] tracking-[0.2em] uppercase mb-5 text-accent" style={{ fontFamily: "'DM Mono', monospace" }}>
@@ -1125,7 +1125,7 @@ export default function App() {
                 </Reveal>
               </div>
 
-              <div className="md:col-span-4 flex md:flex-col md:justify-end md:items-end gap-4 md:gap-3">
+              <div className="md:col-span-4 flex flex-wrap md:flex-col md:justify-end md:items-end gap-x-6 gap-y-3">
                 {[
                   { icon: Github, href: "https://github.com/MrwaN-3bdeeN", label: "GitHub" },
                   { icon: Linkedin, href: "https://www.linkedin.com/in/marwan-3bdeen/", label: "LinkedIn" },
@@ -1134,8 +1134,8 @@ export default function App() {
                   { icon: Send, href: "https://t.me/+201010919594", label: "Telegram" },
                 ].map((s, i) => (
                   <Reveal key={s.label} delay={0.15 + i * 0.08}>
-                    <motion.a href={s.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors" whileHover={{ x: -3 }}>
-                      <s.icon size={14} /> <span>{s.label}</span> <ExternalLink size={10} />
+                    <motion.a href={s.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-xs sm:text-sm text-gray-400 hover:text-white transition-colors whitespace-nowrap" whileHover={{ x: -3 }}>
+                      <s.icon size={13} /> <span>{s.label}</span> <ExternalLink size={9} />
                     </motion.a>
                   </Reveal>
                 ))}
